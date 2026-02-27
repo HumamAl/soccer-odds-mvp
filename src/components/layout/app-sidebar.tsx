@@ -6,7 +6,11 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { APP_CONFIG } from "@/lib/config";
 import {
-  LayoutDashboard,
+  Activity,
+  Trophy,
+  BarChart3,
+  BookOpen,
+  Star,
   ChevronLeft,
   ChevronRight,
   Lightbulb,
@@ -17,15 +21,14 @@ import {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // AGENT CUSTOMIZATION ZONE
-// Feature Builder and Layout Builder agents edit this section only.
-// Replace the navItems array with 3-5 items for the app's feature pages.
-// Replace the icon in SidebarLogo if needed (import from lucide-react).
 // ═══════════════════════════════════════════════════════════════════════════
 
 const navItems = [
-  { href: "/", label: "Dashboard", icon: LayoutDashboard },
-  // Dashboard Builder agent: add 3-5 feature page nav items here.
-  // Example: { href: "/orders", label: "Orders", icon: ShoppingCart },
+  { href: "/", label: "Live Odds", icon: Activity },
+  { href: "/leagues", label: "Leagues", icon: Trophy },
+  { href: "/odds-comparison", label: "Odds Comparison", icon: BarChart3 },
+  { href: "/bookmakers", label: "Bookmakers", icon: BookOpen },
+  { href: "/favorites", label: "Favorites", icon: Star },
 ];
 
 function SidebarLogo({ collapsed }: { collapsed: boolean }) {
